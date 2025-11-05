@@ -17,16 +17,16 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <h3 className="text-4xl font-bold text-[#2E7D32]">600K</h3>
-              <p className="text-[#212121]">People in the UAE have experienced vision loss</p>
+              <h3 className="text-4xl font-bold text-[#2E7D32]">1 in 12</h3>
+              <p className="text-[#212121]">pedestrians with blindness have been hit by a motor vehicle or cyclist</p>
             </div>
             <div>
-              <h3 className="text-4xl font-bold text-[#2E7D32]">27K</h3>
-              <p className="text-[#212121]">Of these individuals are blind</p>
+              <h3 className="text-4xl font-bold text-[#2E7D32]">88%</h3>
+              <p className="text-[#212121]">of visually impaired individuals experience accidents regularly</p>
             </div>
             <div>
-              <h3 className="text-4xl font-bold text-[#2E7D32]">Top Cause</h3>
-              <p className="text-[#212121]">Uncorrected refractive error is a primary cause of visual impairment</p>
+              <h3 className="text-4xl font-bold text-[#2E7D32]">13%</h3>
+              <p className="text-[#212121]">of blind individuals experience at least one head-level injury monthly</p>
             </div>
           </div>
         </div>
