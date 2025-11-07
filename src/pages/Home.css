@@ -1,0 +1,27 @@
+.hero-section {
+  background: linear-gradient(to right, #2E7D32, #4CAF50);
+}
+
+.statistic-card {
+  transition: transform 0.3s ease;
+}
+
+.statistic-card:hover {
+  transform: translateY(-10px);
+}
+
+.core-value-card {
+  transition: transform 0.3s ease;
+}
+
+.core-value-card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-card {
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}

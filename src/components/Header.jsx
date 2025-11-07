@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import HamburgerMenu from './HamburgerMenu';
-import AnimatedBox from './AnimatedBox';
+import logo from '../assets/logo.svg';
+import ThemeToggler from './ThemeToggler';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState({ left: 0, width: 0 });
+  const [activeTab, setActiveTab] = useState(null);
   const navRef = useRef(null);
   const location = useLocation();
 
@@ -13,38 +15,48 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  useEffect(() => {
-    const active = navRef.current.querySelector('.active');
-    if (active) {
-      setActiveLink({ left: active.offsetLeft, width: active.offsetWidth });
-    }
-  }, [location]);
+  const navLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/features', label: 'Features' },
+    { to: '/preorder', label: 'Preorder' },
+    { to: '/contact', label: 'Contact' },
+    { to: '/download', label: 'Download App' },
+  ];
 
   return (
-    <header className="bg-white shadow-md">
+    <header className="bg-white dark:bg-gray-800 z-20">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div>
-          <NavLink to="/" className="text-2xl font-bold text-gray-800 hover:cursor-pointer">WalkSmart</NavLink>
+          <NavLink to="/" className="flex items-center">
+            <img src={logo} alt="The WalkSmart logo, which is the word WalkSmart written in a stylized font." className="h-8 w-auto" />
+          </NavLink>
         </div>
         <div className="flex-grow flex justify-center">
           <nav ref={navRef} className='hidden md:flex relative'>
-            <AnimatedBox left={activeLink.left} width={activeLink.width} />
-            <NavLink to="/" className={({ isActive }) =>
-              "text-[#1a73e8] px-2 hover:text-[#000] hover:underline  mx-1" + (isActive ? " active" : "")
-          }>Home</NavLink>
-            <NavLink to="/features" className={({ isActive }) =>
-              "text-[#1a73e8] px-2 hover:text-[#000] hover:underline  mx-1" + (isActive ? " active" : "")
-          }>Features</NavLink>
-            <NavLink to="/preorder" className={({ isActive }) =>
-              "text-[#1a73e8] px-2 hover:text-[#000] hover:underline  mx-1" + (isActive ? " active" : "")
-          }>Preorder</NavLink>
-            <NavLink to="/contact" className={({ isActive }) =>
-              "text-[#1a73e8] px-2 hover:text-[#000] hover:underline  mx-1" + (isActive ? " active" : "")
-          }>Contact</NavLink>
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium relative"
+                onMouseEnter={() => setActiveTab(link.to)}
+                onMouseLeave={() => setActiveTab(null)}
+              >
+                {link.label}
+                {location.pathname === link.to && (
+                  <motion.div
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-500"
+                    layoutId="underline"
+                  />
+                )}
+              </NavLink>
+            ))}
           </nav>
         </div>
-        <div className="md:hidden">
-          <HamburgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
+        <div className="flex items-center">
+          <ThemeToggler />
+          <div className="md:hidden ml-4 z-30">
+            <HamburgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
+          </div>
         </div>
       </div>
     </header>
