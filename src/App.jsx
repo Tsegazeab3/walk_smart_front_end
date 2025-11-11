@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -7,11 +7,8 @@ import Features from './pages/Features';
 import Preorder from './pages/Preorder';
 import Contact from './pages/Contact';
 import Download from './pages/Download';
-import { ThemeContext } from './context/ThemeContext';
 
 const App = () => {
-  const { theme } = useContext(ThemeContext);
-
   return (
     <Router>
       <div className="font-sans relative min-h-screen flex flex-col">
