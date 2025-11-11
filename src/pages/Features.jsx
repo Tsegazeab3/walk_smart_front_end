@@ -15,16 +15,6 @@ const Features = () => {
           <div className="grid grid-cols-1 md:grid-cols-1 gap-12">
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-              <div className="bg-[#ffffff] p-6 rounded-lg shadow-lg flex flex-col justify-center">
-                <h4 className="text-2xl md:text-3xl font-bold mb-2 text-[#2E7D32]">Safe Road Crossing</h4>
-                <p className="text-[#212121] text-base md:text-lg">WalkSmart helps you cross the road safely by providing real-time information about traffic signals. The device vibrates and provides audio cues to let you know when it is safe to cross.</p>
-              </div>
-              <motion.div className="bg-[#ffffff] p-6 rounded-lg shadow-lg" whileHover={{ scale: 1.05 }}>
-                <img src={crossingTheRoad} alt="A visually impaired person using a white cane and the WalkSmart device to cross a street with a crosswalk. The person is in the middle of the road, and the WalkSmart device is providing guidance." className="w-full rounded-lg" />
-              </motion.div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
               <div className="bg-[#ffffff] p-6 rounded-lg shadow-lg md:order-last flex flex-col justify-center">
                 <h4 className="text-2xl md:text-3xl font-bold mb-2 text-[#2E7D32]">Dangerous Item Detection</h4>
                 <p className="text-[#212121] text-base md:text-lg">WalkSmart can detect and warn you about dangerous items in your path, such as sharp objects or construction debris. The device will vibrate and provide an audio warning to help you avoid these hazards.</p>

@@ -98,7 +98,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-800 mb-4">The Future of Independent Mobility</h3>
-            <p className="text-lg text-gray-700">WalkSmart is a revolutionary wearable device that uses a combination of vibration and audio feedback to guide visually impaired users across roads safely. Our device connects to smart city infrastructure, providing real-time information about traffic signals and pedestrian crossings.</p>
+            <p className="text-lg text-gray-700">WalkSmart is a revolutionary wearable device that uses a combination of vibration and audio feedback to guide visually impaired users across roads safely.</p>
             <p className="text-gray-700">We are on a mission to make cities more accessible and empower the visually impaired to navigate their surroundings with confidence and independence.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
