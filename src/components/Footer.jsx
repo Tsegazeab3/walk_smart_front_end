@@ -20,6 +20,9 @@ const Footer = () => {
           <a href="mailto:tsegazeabkebede422@gmail.com" className="text-white hover:underline">tsegazeabkebede422@gmail.com</a>
           <span className="mx-2">|</span>
           <a href="mailto:h00540222@hct.ac.ae" className="text-white hover:underline">h00540222@hct.ac.ae</a>
+          <a href="mailto:h00540200@hct.ac.ae" className="text-white hover:underline">h00540200@hct.ac.ae</a>
+          <a href="mailto:h00512319@hct.ac.ae" className="text-white hover:underline">h00512319@hct.ac.ae</a>
+          <a href="mailto:h00537600@hct.ac.ae" className="text-white hover:underline">h00537670@hct.ac.ae</a>
         </div>
       </div>
     </footer>
