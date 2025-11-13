@@ -22,7 +22,7 @@ const Preorder = () => {
                 <p className="text-lg text-gray-700 mb-6">Reserve your device today and be among the first to experience a new level of freedom and independence.</p>
 
                 <div className="mb-6">
-                  <p className="text-4xl font-bold text-green-700">2500 AED</p>
+                  <p className="text-4xl font-bold text-green-700">1300 AED</p>
                   <p className="text-gray-600">Special Pre-order Price</p>
                 </div>
 
